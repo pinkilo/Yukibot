@@ -120,11 +120,19 @@ export default class Yuki extends BaseYuki {
 
   private get pageData() {
     return {
+      startTime: this.startTime.toLocaleString("en-GB"),
       config: this.config,
       listeners: this.eventbus.size,
       userCacheSize: (this.usercache?.values?.length || 0) / 2,
       routes: Object.entries(this.routes ?? {}),
       callHistory: this.ytApiCallHistory,
+      callPerMin: (() => {
+        if (this.ytApiCallHistory.length == 0) return 0
+
+        const start = this.startTime.getTime()
+        const durationMin = (Date.now() - start) / 1000 / 60
+        return (this.ytApiCallHistory.length / durationMin).toPrecision(3)
+      })(),
     }
   }
 

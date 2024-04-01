@@ -116,6 +116,7 @@ export default class TestYuki extends Yuki {
       this.restart()
     })
     this.running = true
+    this.startTime = new Date()
     return true
   }
 

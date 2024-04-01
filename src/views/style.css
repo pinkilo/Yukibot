@@ -85,13 +85,13 @@ main h2 {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  max-width: 20rem;
+  /*max-width: 20rem;*/
 }
 
 .horizontal-list li {
   margin: 1% 0;
   display: grid;
-  grid-template: 1fr / 2.3fr 1fr;
+  grid-template: 1fr / 1fr 1fr;
 }
 
 .settings {

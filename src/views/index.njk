@@ -14,6 +14,10 @@
   <h2>Running Config</h2>
   <ul class="horizontal-list settings">
     <li>
+      <span>Start Time</span>
+      <code>{{ startTime }}</code>
+    </li>
+    <li>
       <span>Command Prefix</span>
       <code>{{ config.prefix }}</code>
     </li>
@@ -36,6 +40,10 @@
     <li>
       <span>API Call Count</span>
       <code>{{ callHistory.length }}</code>
+    </li>
+    <li>
+      <span>API Call per Min</span>
+      <code>{{ callPerMin }}</code>
     </li>
   </ul>
 </main>
