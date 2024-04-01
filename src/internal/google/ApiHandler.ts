@@ -1,6 +1,7 @@
 export type CallRecord = {
   type: `${"insert" | "list" | "get"}/${string}`
   success: boolean
+  /** Local machine time */
   time: Date
 }
 

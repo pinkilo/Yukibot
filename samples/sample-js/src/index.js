@@ -7,7 +7,7 @@ async function main() {
     y.logLevel = "http" // info, debug, error
     y.yukiConfig.name = "MyBot"
     y.yukiConfig.prefix = /^>/
-    y.yukiConfig.test = process.env.NODE_ENV === "test"
+    y.yukiConfig.test = !process.env.NODE_ENV || process.env.NODE_ENV === "test"
     y.googleConfig = {
       clientId: process.env.G_CLIENT_ID,
       clientSecret: process.env.G_CLIENT_SECRET,
