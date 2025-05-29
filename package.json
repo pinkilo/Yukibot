@@ -11,6 +11,14 @@
     "./dist",
     "./public"
   ],
+  "keywords": [
+    "youtube",
+    "chatbot",
+    "livestream",
+    "bot",
+    "googleapis",
+    "dsl"
+  ],
   "scripts": {
     "clean": "rm -rf node_modules coverage *.tsbuildinfo yarn.lock dist",
     "prepare": "node prepare.js",
